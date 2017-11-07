@@ -57,9 +57,9 @@ class WxRefundApply(object):
         cer_path = res_path.joinpath(wx_refund.HTTPS_CER_FILE)
         
         http_hdrs = { 'Content-type': 'text/xml', 'Accept': 'text/xml' }
-        conn = HTTP.HTTPSConnection(host=wx_refund.WX_MCH_DOMAIN, port=443,
+        conn = HTTP.HTTPSConnection(host='api.mch.weixin.qq.com', port=443,
                 key_file=str(key_path), cert_file=str(cer_path))
-        conn.request(method='POST', url=wx_refund.WX_REFUND_URL, body=xml_req, headers=http_hdrs)
+        conn.request(method='POST', url='/secapi/pay/refund', body=xml_req, headers=http_hdrs)
         res = conn.getresponse()
         
         xml_rsp = ''

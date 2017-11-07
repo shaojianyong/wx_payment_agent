@@ -9,7 +9,7 @@
 # 银行卡支付的退款3个工作日后重新查询退款状态。
 #
 # 参见：微信公众号支付接口文档 (V3.3.7)
-# 微信订单查询接口：https://api.mch.weixin.qq.com/pay/refundquery
+# 微信退款查询接口：https://api.mch.weixin.qq.com/pay/refundquery
 #
 # Created on 2016-04-12
 # author: shaojianyong
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     
     try:
         handler = WxRefundQuery()
-        result = handler.query_refund_records('4001892001201605155887849274', '1000048701201605151035140723')
+        result = handler.query_refund_records('1000048701201605151035140723', '4001892001201605155887849274')
         logging.info(result)
     except:
         logging.exception('wx_refund_query exception')
