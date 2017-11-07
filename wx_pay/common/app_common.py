@@ -22,3 +22,26 @@ def wx_mch_sign(params):
     dst = md5.hexdigest().upper()
     logging.debug('sign dst: ' + dst)
     return dst
+
+# 单元测试
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG,
+                        format='%(asctime)s %(filename)s:%(lineno)d [%(levelname)s] %(message)s',
+                        datefmt='%Y-%m-%d %H:%M:%S',
+                        filename='app_common.log',
+                        filemode='a')
+    logging.getLogger().addHandler(logging.StreamHandler())
+    
+    try:
+        params = {
+        'transaction_id': '4001892001201605155887849274',
+        'out_trade_no': '1000048701201605151035140723',
+        'out_refund_no': '1000048701201605151035140723',
+        'total_fee': '10000',
+        'refund_fee': '10000',
+        }
+        
+        result = wx_mch_sign(params)
+        logging.info(result)
+    except:
+        logging.exception('app_common exception')
