@@ -8,20 +8,16 @@
 
 # 微信应用信息
 class wx_app_info(object):
-    APP_ID = ''  # 跨境汇款公众号AppID
-    APP_SECRET = ''  # 微信公众号应用密钥
+    APP_ID = 'wxfd0b77802960be00'  # 跨境汇款公众号AppID
+    APP_SECRET = '6c3bb09ed6b2fb52092e3f7f720fc1d0'  # 微信公众号应用密钥
 
 # 微信跨境汇款商户
 class wx_merchant(object):
-    MCH_SPID = ''  # 跨境汇款财付通商户号
-    MCH_B_ID = ''  # 用户ID，商户C账户内部ID
-    MCH_C_ID = ''  # 商户B帐户内部ID
-    SIGN_KEY = ''  # 微信支付商户签名KEY
+    MCH_SPID = '1000048701'  # 跨境汇款财付通商户号
+    SIGN_KEY = 'b48f34296399f9f4b1e5c7a47d7424c5'  # 微信支付商户签名KEY
 
 # 微信退款申请接口
 class wx_refund(object):
-    WX_MCH_DOMAIN  = 'api.mch.weixin.qq.com'
-    WX_REFUND_URL  = '/secapi/pay/refund'
-    HTTPS_KEY_FILE = '1000000000key.pem'  # SSL/TLS双向认证私钥和证书
-    HTTPS_CER_FILE = '1000000000cer.pem'
+    HTTPS_KEY_FILE = '1000048701key.pem'  # SSL/TLS双向认证私钥和证书
+    HTTPS_CER_FILE = '1000048701cer.pem'
     OPERATOR_UID   = wx_merchant.MCH_SPID # 跨境汇款后台操作员号码
