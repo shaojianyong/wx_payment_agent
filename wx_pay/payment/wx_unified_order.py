@@ -134,11 +134,12 @@ if __name__ == '__main__':
             'out_trade_no': '1000048701201711081035140723',
             'total_fee': 10000,
             'spbill_create_ip': '127.0.0.1',
-            'notify_url': '',
+            'notify_url': 'http://wxremit.tenpay.com/cgi-bin/wxremit_callback.cgi',
             'trade_type': 'JSAPI',
+            'openid': 'o6BHkjr-WyC0H7lM7q7LiSKm7JNY',
             }
         handler = WxUnifiedOrder()
-        result = handler.unified_order()
+        result = handler.unified_order(params)
         logging.info(result)
     except:
         logging.exception('wx_unified_order exception')
