@@ -1,7 +1,7 @@
 #!usr/bin/env python
 # -*- coding: utf8 -*-
 #
-# 微信退款代理
+# 微信支付代理--基于Flask的RESTful Web服务
 #
 # Created on 2016-04-12
 # author: shaojianyong
