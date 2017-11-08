@@ -55,7 +55,7 @@ class WxBillDownloadRes(Resource):
 api.add_resource(WxOrderQueryRes, '/wx-pay/order-query/<order_id>')
 api.add_resource(WxRefundApplyRes, '/wx-pay/refund-apply')
 api.add_resource(WxRefundQueryRes, '/wx-pay/refund-query/<order_id>')
-api.add_resource(WxRefundQueryRes, '/wx-pay/bill-download/<bill_date>')
+api.add_resource(WxBillDownloadRes, '/wx-pay/bill-download/<bill_date>')
 
 # 单元测试
 if __name__ == '__main__':
