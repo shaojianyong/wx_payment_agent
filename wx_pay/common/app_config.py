@@ -9,6 +9,7 @@
 # 微信应用信息
 class wx_app_info(object):
     APP_ID = 'wxfd0b77802960be00'  # 公众号AppID
+    APP_NAME = 'GlobalTransfer'  # 应用名称
     APP_SECRET = '6c3bb09ed6b2fb52092e3f7f720fc1d0'  # 微信公众号应用密钥
 
 # 微信商户信息
@@ -20,4 +21,4 @@ class wx_merchant(object):
 class wx_refund(object):
     HTTPS_KEY_FILE = '1000048701key.pem'  # SSL/TLS双向认证私钥和证书
     HTTPS_CER_FILE = '1000048701cer.pem'
-    OPERATOR_UID   = wx_merchant.MCH_SPID # 后台操作员号码
+    OPERATOR_UID = wx_merchant.MCH_SPID # 后台操作员号码
