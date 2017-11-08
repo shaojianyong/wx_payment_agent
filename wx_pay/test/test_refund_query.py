@@ -11,7 +11,7 @@ import urllib.request
 
 # 测试退款查询接口
 def test_refund_query(order_id):
-    rsp = urllib.request.urlopen('http://localhost:5000/wx-pay/refund-query/1000048701201605151035140723')
+    rsp = urllib.request.urlopen('http://localhost:5000/wx-pay/refund-query/%s' % order_id)
     http_status = rsp.status
     http_reason = rsp.reason
     logging.info('http_status=%d, http_reason=%s' % (http_status, http_reason))
